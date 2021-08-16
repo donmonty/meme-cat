@@ -1,12 +1,12 @@
-const songs = require("../content")
+const images = require("../content")
 
 function getRandomPick(list) {
   return Math.floor(Math.random() * list.length);
 }
 
 function selectContent() {
-  const contentIndex = getRandomPick(songs);
-  const pick = songs[contentIndex];
+  const contentIndex = getRandomPick(images);
+  const pick = images[contentIndex];
   //console.log("//// SONG NAME: ", pick.name);
   return pick;
 }

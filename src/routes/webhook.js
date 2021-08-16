@@ -78,7 +78,12 @@ function handleMessage(sender_psid, received_message) {
 
     const content = selectContent();
     response = {
-      text: content.url
+      attachment: {
+        type: "image",
+        payload: {
+          attachment_id: content.attachment_id
+        }
+      }
     }
   }
   callSendAPI(sender_psid, response);
